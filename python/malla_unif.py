@@ -110,5 +110,9 @@ xnod = xnod.reshape((nod.size, -1))
 #imprime la lista de nodos
 print(xnod[:,:2])
 
-# %% Tras finalizar el proceso se recomienda usar este comando
+# Tras finalizar el proceso se recomienda usar este comando
 gmsh.finalize()
+
+from leer_GMSH import * # Funciones para leer y graficar la malla
+
+plot_msh(filename, '2D', True, True, True)
